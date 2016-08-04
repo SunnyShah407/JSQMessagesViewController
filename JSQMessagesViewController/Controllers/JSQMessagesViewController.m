@@ -173,15 +173,14 @@ JSQMessagesKeyboardControllerDelegate>
 
     self.jsq_isObserving = NO;
 
-    self.toolbarHeightConstraint.constant = self.inputToolbar.preferredDefaultHeight;
+    self.toolbarHeightConstraint.constant = 64;
 
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
 
     self.inputToolbar.delegate = self;
-    self.inputToolbar.contentView.textView.placeHolder = [NSBundle jsq_localizedStringForKey:@"new_message"];
-
-    self.inputToolbar.contentView.textView.accessibilityLabel = [NSBundle jsq_localizedStringForKey:@"new_message"];
+    self.inputToolbar.contentView.textView.placeHolder = @"Enter your message...";
+    self.inputToolbar.contentView.textView.accessibilityLabel = @"Enter your message...";
 
     self.inputToolbar.contentView.textView.delegate = self;
 

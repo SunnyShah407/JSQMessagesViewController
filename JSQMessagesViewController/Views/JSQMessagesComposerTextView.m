@@ -31,11 +31,11 @@
 {
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    CGFloat cornerRadius = 6.0f;
+    CGFloat cornerRadius = 0.0f;
 
     self.backgroundColor = [UIColor whiteColor];
-    self.layer.borderWidth = 0.5f;
-    self.layer.borderColor = [UIColor lightGrayColor].CGColor;
+   // self.layer.borderWidth = 0.5f;
+   // self.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.layer.cornerRadius = cornerRadius;
 
     self.scrollIndicatorInsets = UIEdgeInsetsMake(cornerRadius, 0.0f, cornerRadius, 0.0f);
@@ -156,8 +156,18 @@
     if ([self.text length] == 0 && self.placeHolder) {
         [self.placeHolderTextColor set];
 
-        [self.placeHolder drawInRect:CGRectInset(rect, 7.0f, 5.0f)
-                      withAttributes:[self jsq_placeholderTextAttributes]];
+//        [self.placeHolder drawInRect:CGRectInset(rect, 7.0f, 5.0f)
+//                      withAttributes:[self jsq_placeholderTextAttributes]];
+        
+        CGRect viewRect = rect;
+        UIFont* font = [UIFont systemFontOfSize:15];
+        CGSize size = [self.placeHolder sizeWithFont:font
+                         constrainedToSize:viewRect.size
+                             lineBreakMode:(UILineBreakModeWordWrap)];
+        float x_pos = (viewRect.size.width - size.width) / 2;
+        float y_pos = (viewRect.size.height - size.height) /2;
+        [self.placeHolder drawAtPoint:CGPointMake(15, viewRect.origin.y + y_pos + 3) withFont:font];
+
     }
 }
 

@@ -14,8 +14,7 @@
 //  License
 //  Copyright (c) 2014 Jesse Squires
 //  Released under an MIT license: http://opensource.org/licenses/MIT
-//
-
+//`
 #import "UIColor+JSQMessages.h"
 
 @implementation UIColor (JSQMessages)
@@ -24,10 +23,8 @@
 
 + (UIColor *)jsq_messageBubbleGreenColor
 {
-    return [UIColor colorWithHue:130.0f / 360.0f
-                      saturation:0.68f
-                      brightness:0.84f
-                           alpha:1.0f];
+    
+    return [UIColor colorWithRed:128.0f/255.0f green:188.0f/255.0f blue:230.0f/255.0f alpha:1.0];
 }
 
 + (UIColor *)jsq_messageBubbleBlueColor
@@ -48,10 +45,7 @@
 
 + (UIColor *)jsq_messageBubbleLightGrayColor
 {
-    return [UIColor colorWithHue:240.0f / 360.0f
-                      saturation:0.02f
-                      brightness:0.92f
-                           alpha:1.0f];
+    return [UIColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0];
 }
 
 #pragma mark - Utilities

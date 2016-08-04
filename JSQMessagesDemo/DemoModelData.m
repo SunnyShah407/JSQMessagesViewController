@@ -82,10 +82,13 @@
          *  Be sure to create your bubble images one time and reuse them for good performance.
          *
          */
+        
+        
+        
         JSQMessagesBubbleImageFactory *bubbleFactory = [[JSQMessagesBubbleImageFactory alloc] init];
         
-        self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleLightGrayColor]];
-        self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleGreenColor]];
+        self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleGreenColor]];
+        self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleLightGrayColor]];
     }
     
     return self;
@@ -130,8 +133,8 @@
                                                      text:@"Now with media messages!"],
                      nil];
     
-    [self addPhotoMediaMessage];
-    [self addAudioMediaMessage];
+  //  [self addPhotoMediaMessage];
+   // [self addAudioMediaMessage];
     
     /**
      *  Setting to load extra messages for testing/demo

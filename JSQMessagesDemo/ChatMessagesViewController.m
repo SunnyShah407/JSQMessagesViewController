@@ -16,9 +16,9 @@
 //  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
-#import "DemoMessagesViewController.h"
+#import "ChatMessagesViewController.h"
 
-@implementation DemoMessagesViewController
+@implementation ChatMessagesViewController
 
 #pragma mark - View lifecycle
 

@@ -66,6 +66,9 @@
  */
 @property (copy, nonatomic) NSString *senderId;
 
+
+
+
 /**
  *  Specifies whether or not the view controller should automatically scroll to the most recent message
  *  when the view appears and when sending, receiving, and composing a new message.

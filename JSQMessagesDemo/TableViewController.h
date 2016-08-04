@@ -19,7 +19,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "DemoMessagesViewController.h"
+#import "ChatMessagesViewController.h"
 
 @interface TableViewController : UITableViewController <JSQDemoViewControllerDelegate>
 

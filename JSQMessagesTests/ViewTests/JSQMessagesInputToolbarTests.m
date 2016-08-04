@@ -12,7 +12,7 @@
 
 #import "JSQMessagesViewController.h"
 #import "JSQMessagesInputToolbar.h"
-#import "DemoMessagesViewController.h"
+#import "ChatMessagesViewController.h"
 
 
 @interface JSQMessagesInputToolbarTests : XCTestCase
@@ -47,7 +47,7 @@
     UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     XCTAssertNotNil(mainSB, @"Storyboard should not be nil");
 
-    DemoMessagesViewController *demoVC = [mainSB instantiateViewControllerWithIdentifier:@"DemoVC"];
+    ChatMessagesViewController *demoVC = [mainSB instantiateViewControllerWithIdentifier:@"DemoVC"];
     [demoVC beginAppearanceTransition:YES animated:NO];
     [demoVC endAppearanceTransition];
 

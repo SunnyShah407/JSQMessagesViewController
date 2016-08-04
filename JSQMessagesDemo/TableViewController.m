@@ -134,7 +134,7 @@
                 break;
             case 1:
             {
-                DemoMessagesViewController *vc = [DemoMessagesViewController messagesViewController];
+                ChatMessagesViewController *vc = [ChatMessagesViewController messagesViewController];
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;
@@ -147,7 +147,7 @@
                 break;
             case 1:
             {
-                DemoMessagesViewController *vc = [DemoMessagesViewController messagesViewController];
+                ChatMessagesViewController *vc = [ChatMessagesViewController messagesViewController];
                 vc.delegateModal = self;
                 UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
                 [self presentViewController:nc animated:YES completion:nil];
@@ -170,7 +170,7 @@
                 blank.title = @"Blank";
                 blank.view.backgroundColor = [UIColor lightGrayColor];
                 [self.navigationController pushViewController:blank animated:NO];
-                DemoMessagesViewController *vc = [DemoMessagesViewController messagesViewController];
+                ChatMessagesViewController *vc = [ChatMessagesViewController messagesViewController];
                 [self.navigationController pushViewController:vc animated:YES];
             }
         }
@@ -183,7 +183,7 @@
 {
     if ([segue.identifier isEqualToString:@"segueModalDemoVC"]) {
         UINavigationController *nc = segue.destinationViewController;
-        DemoMessagesViewController *vc = (DemoMessagesViewController *)nc.topViewController;
+        ChatMessagesViewController *vc = (ChatMessagesViewController *)nc.topViewController;
         vc.delegateModal = self;
     }
 }
@@ -192,7 +192,7 @@
 
 #pragma mark - Demo delegate
 
-- (void)didDismissJSQDemoViewController:(DemoMessagesViewController *)vc
+- (void)didDismissJSQDemoViewController:(ChatMessagesViewController *)vc
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

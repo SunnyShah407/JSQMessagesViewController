@@ -11,7 +11,7 @@
 #import <XCTest/XCTest.h>
 
 #import "JSQMessagesViewController.h"
-#import "DemoMessagesViewController.h"
+#import "ChatMessagesViewController.h"
 
 
 @interface JSQMessagesViewController ()
@@ -68,7 +68,7 @@
 
 - (void)testJSQMessagesViewControllerSubclassInitProgramatically
 {
-    DemoMessagesViewController *demoVC = [DemoMessagesViewController messagesViewController];
+    ChatMessagesViewController *demoVC = [ChatMessagesViewController messagesViewController];
     demoVC.senderId = @"senderId";
     demoVC.senderDisplayName = @"senderDisplayName";
 
@@ -76,7 +76,7 @@
     [demoVC endAppearanceTransition];
 
     XCTAssertNotNil(demoVC, @"View controller should not be nil");
-    XCTAssertTrue([demoVC isKindOfClass:[DemoMessagesViewController class]], @"View controller should be kind of class: %@", [DemoMessagesViewController class]);
+    XCTAssertTrue([demoVC isKindOfClass:[ChatMessagesViewController class]], @"View controller should be kind of class: %@", [ChatMessagesViewController class]);
     XCTAssertNotNil(demoVC.view, @"View should not be nil");
     XCTAssertNotNil(demoVC.collectionView, @"Collection view should not be nil");
     XCTAssertNotNil(demoVC.inputToolbar, @"Input toolbar should not be nil");
@@ -87,7 +87,7 @@
     UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     XCTAssertNotNil(mainSB, @"Storyboard should not be nil");
     
-    DemoMessagesViewController *demoVC = [mainSB instantiateViewControllerWithIdentifier:@"DemoVC"];
+    ChatMessagesViewController *demoVC = [mainSB instantiateViewControllerWithIdentifier:@"DemoVC"];
     demoVC.senderId = @"senderId";
     demoVC.senderDisplayName = @"senderDisplayName";
 
@@ -95,7 +95,7 @@
     [demoVC endAppearanceTransition];
 
     XCTAssertNotNil(demoVC, @"View controller should not be nil");
-    XCTAssertTrue([demoVC isKindOfClass:[DemoMessagesViewController class]], @"View controller should be kind of class: %@", [DemoMessagesViewController class]);
+    XCTAssertTrue([demoVC isKindOfClass:[ChatMessagesViewController class]], @"View controller should be kind of class: %@", [ChatMessagesViewController class]);
     XCTAssertNotNil(demoVC.view, @"View should not be nil");
     XCTAssertNotNil(demoVC.collectionView, @"Collection view should not be nil");
     XCTAssertNotNil(demoVC.inputToolbar, @"Input toolbar should not be nil");
